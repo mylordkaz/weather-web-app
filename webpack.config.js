@@ -6,11 +6,20 @@ const config = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: '[name][ext]',
     filename: 'main.js',
     clean: true,
   },
+  devServer: {
+    static: './dist',
+    open: true,
+  },
   module: {
     rules: [
+      {
+        test: /\.(png|svg|jpg)$/i,
+        type: 'asset/resource',
+      },
       {
         test: /\.css$/,
         use: [
