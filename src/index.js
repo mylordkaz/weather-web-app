@@ -1,4 +1,5 @@
 import './styles.css';
+import sun from './assets/004-sun.png';
 document.addEventListener('DOMContentLoaded', () => {
   const search = document.querySelector('#search');
 
@@ -32,7 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const image = document.querySelector('.image');
       const iconUrl = `https:${json.current.condition.icon}`;
 
-      image.src = iconUrl;
+      //   if (json.current.condition.text === 'Sunny') {
+      //     image.src = sun;
+      //   } else {
+      //     image.src = iconUrl;
+      //   }
       details.innerHTML = json.current.condition.text;
       temperature.innerHTML = `${json.current.temp_c}<span>°C</span>`;
       humidity.innerHTML = `${json.current.humidity}<span> Humidity</span>`;
