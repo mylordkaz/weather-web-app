@@ -30,8 +30,8 @@ search.addEventListener('submit', (event) => {
       image.src = iconUrl;
       details.innerHTML = json.current.condition.text;
       temperature.innerHTML = `${parseInt(json.current.temp_c)}<span>°C</span>`;
-      humidity.innerHTML = json.current.humidity;
-      wind.innerHTML = json.current.wind_kph;
+      humidity.innerHTML = `${json.current.humidity}<span> Humidity</span>`;
+      wind.innerHTML = `${json.current.wind_kph}<span> km/h wind speed</span>`;
       console.log(json);
     });
 });

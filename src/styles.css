@@ -21,6 +21,13 @@ body {
   align-items: center;
   gap: 2rem;
 }
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 1rem;
+}
 input {
   border-radius: 15px;
   width: 20rem;
