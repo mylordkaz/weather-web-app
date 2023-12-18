@@ -16,7 +16,7 @@ body {
   position: relative;
   width: 400px;
   height: 105px;
-  background: #dff6ff;
+  background: linear-gradient(305deg, #2196f3, #fff);
   backdrop-filter: blur(10px);
   padding: 28px 32px;
   overflow: hidden;
