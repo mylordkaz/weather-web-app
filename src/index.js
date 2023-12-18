@@ -1,5 +1,4 @@
 import './styles.css';
-import sun from './assets/004-sun.png';
 
 const weatherBox = document.querySelector('.weather-box');
 const weatherDetails = document.querySelector('.weather-details');
