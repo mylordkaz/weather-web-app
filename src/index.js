@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
       image.src = iconUrl;
       details.innerHTML = json.current.condition.text;
       temperature.innerHTML = `${json.current.temp_c}<span>°C</span>`;
-      humidity.innerHTML = `<i class="fa-solid fa-droplet fa-lg"></i> ${json.current.humidity}<span> %</span>`;
-      wind.innerHTML = `<i class="fa-solid fa-wind fa-lg"></i> ${json.current.wind_kph}<span> km/h</span>`;
+      humidity.innerHTML = `<i class="fa-solid fa-droplet fa-lg"></i><span>${json.current.humidity} %</span><span>Humidity</span>`;
+      wind.innerHTML = `<i class="fa-solid fa-wind fa-lg"></i><span> ${json.current.wind_kph} km/h </span><span> wind</span>`;
 
       weatherBox.style.display = '';
       weatherDetails.style.display = '';
