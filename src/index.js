@@ -1,12 +1,17 @@
 import './styles.css';
 import sun from './assets/004-sun.png';
+
+const weatherBox = document.querySelector('.weather-box');
+const weatherDetails = document.querySelector('.weather-details');
+const container = document.querySelector('.container');
+
 document.addEventListener('DOMContentLoaded', () => {
   const search = document.querySelector('#search');
 
   search.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const APIKey = '801c8533cc3e46ae8b2164127230612 ';
+    const APIKey = '801c8533cc3e46ae8b2164127230612';
     let input = document.querySelector('input').value;
 
     if (input === '') {
@@ -33,16 +38,17 @@ document.addEventListener('DOMContentLoaded', () => {
       const image = document.querySelector('.image');
       const iconUrl = `https:${json.current.condition.icon}`;
 
-      //   if (json.current.condition.text === 'Sunny') {
-      //     image.src = sun;
-      //   } else {
-      //     image.src = iconUrl;
-      //   }
+      image.src = iconUrl;
       details.innerHTML = json.current.condition.text;
       temperature.innerHTML = `${json.current.temp_c}<span>°C</span>`;
       humidity.innerHTML = `<i class="fa-solid fa-droplet fa-lg"></i> ${json.current.humidity}<span> %</span>`;
       wind.innerHTML = `<i class="fa-solid fa-wind fa-lg"></i> ${json.current.wind_kph}<span> km/h</span>`;
-      console.log(json);
+
+      weatherBox.style.display = '';
+      weatherDetails.style.display = '';
+      weatherBox.classList.add('fadeIn');
+      weatherDetails.classList.add('fadeIn');
+      container.style.height = '590px';
     } catch (error) {
       console.error('Error fetchig data', error.message);
     }
