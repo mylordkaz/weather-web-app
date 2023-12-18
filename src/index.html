@@ -3,29 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/e1c3707afb.js"
+      crossorigin="anonymous"
+    ></script>
     <title>weatherWebApp</title>
   </head>
   <body>
     <div class="container">
       <form id="search">
-        <input type="text" placeholder="search location.." />
-        <button type="submit">search</button>
+        <i class="fa-solid fa-location-dot fa-xl" style="color: #000000"></i>
+        <input type="text" placeholder="Enter Location.." />
+        <button
+          type="submit"
+          class="fa-solid fa-magnifying-glass fa-xl"
+        ></button>
       </form>
-      <div class="display">
-        <div class="location">
-          <div class="city"></div>
-          <div class="details"></div>
-        </div>
-        <div class="main">
-          <div class="left">
-            <img class="image" />
-          </div>
-          <div class="right">
-            <div class="temperature"></div>
-            <div class="humidity"></div>
-            <div class="wind"></div>
-          </div>
-        </div>
+
+      <div class="weather-box">
+        <div class="city"></div>
+        <div class="details"></div>
+        <img class="image" src="" />
+        <div class="temperature"></div>
+      </div>
+      <div class="weather-details">
+        <div class="humidity"></div>
+        <div class="wind"></div>
       </div>
     </div>
   </body>

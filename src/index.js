@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
       //   }
       details.innerHTML = json.current.condition.text;
       temperature.innerHTML = `${json.current.temp_c}<span>°C</span>`;
-      humidity.innerHTML = `${json.current.humidity}<span> Humidity</span>`;
-      wind.innerHTML = `${json.current.wind_kph}<span> km/h wind speed</span>`;
+      humidity.innerHTML = `<i class="fa-solid fa-droplet fa-lg"></i> ${json.current.humidity}<span> %</span>`;
+      wind.innerHTML = `<i class="fa-solid fa-wind fa-lg"></i> ${json.current.wind_kph}<span> km/h</span>`;
       console.log(json);
     } catch (error) {
       console.error('Error fetchig data', error.message);
